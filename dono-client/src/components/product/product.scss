@@ -1,0 +1,28 @@
+.c-product {
+  display: flex;
+  font-family: "Varela Round", sans-serif;
+  margin: 0 50px 50px 0;
+  max-width: 50%;
+  .image {
+    height: 150px;
+    width: 150px;
+    background-color: lightgray;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .product-info {
+    .name {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .store {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

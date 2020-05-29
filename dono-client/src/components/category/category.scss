@@ -1,0 +1,22 @@
+.c-category {
+  margin: 0 50px;
+  font-family: "Varela Round", sans-serif;
+  margin-bottom: 50px;
+  border-bottom: 1px solid lightgray;
+  .c-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    .name {
+      font-size: 3.5rem;
+    }
+    .edit {
+      font-size: 2rem;
+    }
+  }
+  .c-category-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

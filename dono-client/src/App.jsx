@@ -5,6 +5,22 @@ import Profile from "./components/profile/profile.jsx";
 import Category from "./components/category/category.jsx";
 import Product from "./components/product/product.jsx";
 
+
+const data = [
+  {
+    uuid: 1,
+    categoryName: "Shoes",
+    products: [
+      {
+        uuid: 2,
+        productName: "Name",
+        productPrice: 5,
+        productStore: "amazon.com"
+      }
+    ]
+  }
+];
+
 class App extends Component {
   render() {
     return (

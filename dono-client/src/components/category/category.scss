@@ -6,15 +6,17 @@
   margin-bottom: 50px;
   border-bottom: 1px solid lightgray;
   max-width: 1250px;
+  padding: 0 75px;
 
   @include breakpoint(desktop-sm) {
     margin: 0 auto 50px auto;
   }
   .c-category-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     margin-bottom: 50px;
+    position: relative;
     @include breakpoint(desktop-sm) {
       margin-bottom: 25px;
     }

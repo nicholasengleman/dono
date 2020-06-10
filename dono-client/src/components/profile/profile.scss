@@ -1,96 +1,95 @@
 @import "./../../styles/breakpoints.scss";
 
 .c-profile {
-    font-family: "Varela Round", sans-serif;
-    margin-bottom: 200px;
-    background-color: #72a065;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    .c-header {
-        width: 100%;
-        height: 500px;
-        padding: 0 50px;
-        max-width: 1250px;
-        margin: 0 auto;
-        @include breakpoint(desktop-sm) {
-            height: 280px;
-            padding: 0;
-        }
-        .c-nav {
-            height: 100px;
-            @include breakpoint(desktop-sm) {
-                height: 50px;
-            }
-        }
-        .c-header-info {
-            display: flex;
-            margin-top: 150px;
-            @include breakpoint(desktop-sm) {
-                margin-top: 50px;
-            }
-            .c-profileImg {
-                background-color: whitesmoke;
-                border-radius: 50px;
-                width: 300px;
-                height: 400px;
-
-                @include breakpoint(desktop-sm) {
-                    width: 200px;
-                    height: 250px;
-                }
-            }
-            .c-info {
-                padding: 30px;
-                @include breakpoint(desktop-sm) {
-                    padding: 10px 30px;
-                }
-                .name {
-                    font-size: 4rem;
-                    color: white;
-                    margin-bottom: 0.75rem;
-                    letter-spacing: 2px;
-                    @include breakpoint(desktop-sm) {
-                        font-size: 2.5rem;
-                        margin-bottom: 0.5rem;
-                    }
-                }
-                .title {
-                    color: white;
-                    font-size: 2rem;
-                    margin-bottom: 1rem;
-                    letter-spacing: 2px;
-                    @include breakpoint(desktop-sm) {
-                        font-size: 1.5rem;
-                        margin-bottom: 1.5rem;
-                    }
-                }
-                .c-stats {
-                    .c-followers {
-                        font-size: 1.5rem;
-                        display: flex;
-                        font-weight: 500;
-                        color: white;
-                        @include breakpoint(desktop-sm) {
-                            font-size: 1rem;
-                        }
-                        .followerImg {
-                            height: 60px;
-                            width: 60px;
-                            border-radius: 10px;
-                            background-color: lightblue;
-                            margin-right: 10px;
-                            @include breakpoint(desktop-sm) {
-                                height: 40px;
-                                width: 40px;
-                            }
-                        }
-                        .followerNumber {
-                            margin-bottom: 0.5rem;
-                            display: inline-block;
-                        }
-                    }
-                }
-            }
-        }
+  font-family: "Varela Round", sans-serif;
+  margin-bottom: 200px;
+  background-color: #72a065;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  .c-header {
+    width: 100%;
+    height: 500px;
+    padding: 0 75px;
+    max-width: 1250px;
+    margin: 0 auto;
+    @include breakpoint(desktop-sm) {
+      height: 280px;
     }
+    .c-nav {
+      height: 100px;
+      @include breakpoint(desktop-sm) {
+        height: 50px;
+      }
+    }
+    .c-header-info {
+      display: flex;
+      margin-top: 150px;
+      @include breakpoint(desktop-sm) {
+        margin-top: 50px;
+      }
+      .c-profileImg {
+        background-color: whitesmoke;
+        border-radius: 50px;
+        width: 300px;
+        height: 400px;
+
+        @include breakpoint(desktop-sm) {
+          width: 200px;
+          height: 250px;
+        }
+      }
+      .c-info {
+        padding: 30px;
+        @include breakpoint(desktop-sm) {
+          padding: 10px 30px;
+        }
+        .name {
+          font-size: 4rem;
+          color: white;
+          margin-bottom: 0.75rem;
+          letter-spacing: 2px;
+          @include breakpoint(desktop-sm) {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+        .title {
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          letter-spacing: 2px;
+          @include breakpoint(desktop-sm) {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+        .c-stats {
+          .c-followers {
+            font-size: 1.5rem;
+            display: flex;
+            font-weight: 500;
+            color: white;
+            @include breakpoint(desktop-sm) {
+              font-size: 1rem;
+            }
+            .followerImg {
+              height: 60px;
+              width: 60px;
+              border-radius: 10px;
+              background-color: lightblue;
+              margin-right: 10px;
+              @include breakpoint(desktop-sm) {
+                height: 40px;
+                width: 40px;
+              }
+            }
+            .followerNumber {
+              margin-bottom: 0.5rem;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
 }

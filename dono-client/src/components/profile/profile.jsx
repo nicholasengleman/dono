@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Toggle from './../toggle/toggle.jsx';
 import "./profile.scss";
 
 class Profile extends Component {
@@ -26,6 +27,7 @@ class Profile extends Component {
               </div>
             </div>
           </div>
+          <Toggle />
         </div>
       </div>
     );

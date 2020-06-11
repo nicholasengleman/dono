@@ -1,0 +1,36 @@
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  height: 35px;
+  width: 120px;
+}
+
+.donate {
+  background: #00684d;
+  background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    linear-gradient(
+      to right,
+      lighten(#00684d, 15%) 0%,
+      #00684d 50%,
+      lighten(#00684d, 15%) 100%
+    );
+  background-position: 0 0;
+  background-size: 200% 100%;
+  border-radius: 6px;
+  color: #fff;
+  text-shadow: 1px 1px 5px #666;
+  -webkit-transition: all 800ms;
+  transition: all 800ms;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-position: -100% 0;
+  }
+}

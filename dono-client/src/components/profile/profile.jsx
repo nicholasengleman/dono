@@ -26,8 +26,8 @@ class Profile extends Component {
                 </div>
               </div>
             </div>
+            <Toggle />
           </div>
-          <Toggle />
         </div>
       </div>
     );

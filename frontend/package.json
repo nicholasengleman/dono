@@ -1,7 +1,7 @@
 {
-  "name": "sperro",
+  "name": "sick-fits-frontend",
   "version": "1.0.0",
-  "description": "A wishlist of the things that make you happy",
+  "description": "Sick Fits! An example React, GraphQL, Next and Apollo",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 7777",

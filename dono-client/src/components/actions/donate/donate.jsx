@@ -4,7 +4,7 @@ import "./donate.scss";
 class Donate extends Component {
   render() {
     return (
-      <a href="#" class="donate">
+      <a href="#" className="donate">
         DONATE
       </a>
     );

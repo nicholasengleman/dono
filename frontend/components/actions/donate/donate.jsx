@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-//import "./donate.scss";
+import StyledDonateBtn from "./donateStyles";
 
 class Donate extends Component {
   render() {
-    return (
-      <a href="#" className="donate">
-        DONATE
-      </a>
-    );
+    return <StyledDonateBtn>Contribute</StyledDonateBtn>;
   }
 }
 

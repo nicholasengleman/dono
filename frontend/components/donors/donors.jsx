@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
-//import "./donors.scss";
+import StyledDonors from "./donateStyles";
 
 class Donors extends Component {
   constructor(props) {
@@ -32,7 +31,7 @@ class Donors extends Component {
 
   render() {
     return (
-      <div className="subscriberContainer">
+      <StyledDonors>
         {this.state.subThumbnails.map((sub, i) => {
           if (i < this.state.subThumbnails.length - 1) {
             return (
@@ -52,7 +51,7 @@ class Donors extends Component {
           />
           <div className="subsRemaining">+{this.state.subsTotal - 5}</div>
         </div>
-      </div>
+      </StyledDonors>
     );
   }
 }

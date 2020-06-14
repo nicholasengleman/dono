@@ -1,4 +1,7 @@
-.subscriberContainer {
+import styled from "styled-components";
+import device from "../../utils/breakspoints";
+
+export default styled.div`
   display: flex;
   justify-content: flex-start;
   margin: 10px 0 0 20px;
@@ -30,4 +33,4 @@
     font-weight: 600;
     margin-left: 20px;
   }
-}
+`;

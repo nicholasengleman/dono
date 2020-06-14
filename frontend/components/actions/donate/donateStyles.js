@@ -1,13 +1,15 @@
-a {
+import styled from "styled-components";
+import device from "../../../utils/breakspoints";
+import { lighten } from "polished";
+
+export default styled.a`
   display: inline-block;
   position: relative;
   text-decoration: none;
   height: 35px;
   width: 120px;
-}
-
-.donate {
   background: #00684d;
+  text-transform: uppercase;
   background: linear-gradient(
       to bottom,
       transparent 0%,
@@ -15,16 +17,16 @@ a {
     ),
     linear-gradient(
       to right,
-      lighten(#00684d, 15%) 0%,
+      ${lighten(0.15, "#00684d")} 0%,
       #00684d 50%,
-      lighten(#00684d, 15%) 100%
+      ${lighten(0.15, "#00684d")} 100%
     );
   background-position: 0 0;
   background-size: 200% 100%;
   border-radius: 6px;
   color: #fff;
+  cursor: pointer;
   text-shadow: 1px 1px 5px #666;
-  -webkit-transition: all 800ms;
   transition: all 800ms;
   font-size: 0.8rem;
   display: flex;
@@ -33,4 +35,4 @@ a {
   &:hover {
     background-position: -100% 0;
   }
-}
+`;

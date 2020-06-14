@@ -1,14 +1,15 @@
-@import "./../../styles/breakpoints.scss";
+import styled from "styled-components";
+import device from "../../utils/breakspoints";
 
-.c-category {
-  margin: 0 50px;
+export default styled.div`
+  margin: 0 auto;
   font-family: "Varela Round", sans-serif;
   margin-bottom: 50px;
   border-bottom: 1px solid lightgray;
   max-width: 1250px;
   padding: 0 75px;
 
-  @include breakpoint(desktop-sm) {
+  @media ${device.desktopSM} {
     margin: 0 auto 50px auto;
   }
   .c-category-header {
@@ -17,14 +18,14 @@
     align-items: flex-end;
     margin-bottom: 50px;
     position: relative;
-    @include breakpoint(desktop-sm) {
+    @media ${device.desktopSM} {
       margin-bottom: 25px;
     }
     .name {
       font-size: 3.5rem;
       border: none;
       width: fit-content;
-      @include breakpoint(desktop-sm) {
+      @media ${device.desktopSM} {
         font-size: 2rem;
       }
       &.editMode {
@@ -36,7 +37,7 @@
     }
     .edit {
       font-size: 2rem;
-      @include breakpoint(desktop-sm) {
+      @media ${device.desktopSM} {
         font-size: 1.5rem;
       }
     }
@@ -44,5 +45,6 @@
   .c-category-body {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
-}
+`;

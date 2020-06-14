@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-//import "./add.scss";
+import StyledAddBtn from "./addStyles";
 
 class Add extends Component {
   render() {
     return (
-      <button className="c-add">
+      <StyledAddBtn>
         <i className="fas fa-plus"></i>
-      </button>
+      </StyledAddBtn>
     );
   }
 }

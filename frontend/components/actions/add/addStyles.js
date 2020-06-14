@@ -1,4 +1,7 @@
-.c-add {
+import styled from "styled-components";
+import device from "../../../utils/breakspoints";
+
+export default styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -19,4 +22,4 @@
   .fas {
     font-size: 1rem;
   }
-}
+`;

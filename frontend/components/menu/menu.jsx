@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-//import "./menu.scss";
-//import menuIcon from "./../../images/menu-icon.png";
+import StyledMenuContainer from "./menuStyles";
+import menuIcon from "./../../images/menu-icon.png";
 
 class Menu extends Component {
   constructor(props) {
@@ -43,12 +43,12 @@ class Menu extends Component {
 
   render() {
     return (
-      <div className="menu-container">
-        {/* <img
+      <StyledMenuContainer>
+        <img
           src={menuIcon}
           className="menu-icon"
           onClick={() => this.toggleMenu()}
-        /> */}
+        />
         <div
           className={`menu ${this.state.visibility ? "visible" : ""}`}
           ref={this.setWrapperRef}
@@ -58,7 +58,7 @@ class Menu extends Component {
             <li>Delete</li>
           </ul>
         </div>
-      </div>
+      </StyledMenuContainer>
     );
   }
 }

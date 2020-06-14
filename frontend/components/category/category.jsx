@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-//import "./category.scss";
 
+import StyledCategory from "./categoryStyles";
 import Menu from "./../menu/menu.jsx";
 
 class Category extends Component {
@@ -47,7 +47,7 @@ class Category extends Component {
 
   render() {
     return (
-      <div className="c-category">
+      <StyledCategory>
         <div className="c-category-header">
           <Menu toggleEditMode={this.toggleEditMode} />
           <input
@@ -60,7 +60,7 @@ class Category extends Component {
           />
         </div>
         <div className="c-category-body">{this.props.children}</div>
-      </div>
+      </StyledCategory>
     );
   }
 }

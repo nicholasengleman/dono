@@ -1,3 +1,6 @@
+//import "./../styles/index.scss";
+
+import Profile from "./../components/profile/profile.jsx";
 import Category from "./../components/category/category.jsx";
 import Product from "./../components/product/product.jsx";
 
@@ -106,8 +109,9 @@ const data = [
   },
 ];
 
-const Home = (props) => (
+const App = (props) => (
   <React.Fragment>
+    <Profile />
     {data.map(({ uuid, products, categoryName }, i) => (
       <Category key={i} name={categoryName} uuid={uuid}>
         {products.map(({ uuid, name, price, store }, j) => (
@@ -124,4 +128,4 @@ const Home = (props) => (
   </React.Fragment>
 );
 
-export default Home;
+export default App;

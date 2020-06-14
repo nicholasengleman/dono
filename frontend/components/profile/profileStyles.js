@@ -1,6 +1,7 @@
-@import "./../../styles/breakpoints.scss";
+import styled from "styled-components";
+import device from "../../utils/breakspoints";
 
-.c-profile {
+export default styled.div`
   font-family: "Varela Round", sans-serif;
   margin-bottom: 200px;
   background-color: #72a065;
@@ -13,12 +14,12 @@
     max-width: 1250px;
     margin: 0 auto;
 
-    @include breakpoint(desktop-sm) {
+    @media ${device.desktopSM} {
       height: 280px;
     }
     .c-nav {
       height: 100px;
-      @include breakpoint(desktop-sm) {
+      @media ${device.desktopSM} {
         height: 50px;
       }
     }
@@ -26,7 +27,7 @@
       display: flex;
       margin-top: 150px;
       position: relative;
-      @include breakpoint(desktop-sm) {
+      @media ${device.desktopSM} {
         margin-top: 50px;
       }
       .c-profileImg {
@@ -35,14 +36,14 @@
         width: 300px;
         height: 400px;
 
-        @include breakpoint(desktop-sm) {
+        @media ${device.desktopSM} {
           width: 200px;
           height: 250px;
         }
       }
       .c-info {
         padding: 30px;
-        @include breakpoint(desktop-sm) {
+        @media ${device.desktopSM} {
           padding: 10px 30px;
         }
         .name {
@@ -50,7 +51,7 @@
           color: white;
           margin-bottom: 0.75rem;
           letter-spacing: 2px;
-          @include breakpoint(desktop-sm) {
+          @media ${device.desktopSM} {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
           }
@@ -60,7 +61,7 @@
           font-size: 2rem;
           margin-bottom: 1rem;
           letter-spacing: 2px;
-          @include breakpoint(desktop-sm) {
+          @media ${device.desktopSM} {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
           }
@@ -71,7 +72,7 @@
             display: flex;
             font-weight: 500;
             color: white;
-            @include breakpoint(desktop-sm) {
+            @media ${device.desktopSM} {
               font-size: 1rem;
             }
             .followerImg {
@@ -80,7 +81,7 @@
               border-radius: 10px;
               background-color: lightblue;
               margin-right: 10px;
-              @include breakpoint(desktop-sm) {
+              @media ${device.desktopSM} {
                 height: 40px;
                 width: 40px;
               }
@@ -94,4 +95,4 @@
       }
     }
   }
-}
+`;

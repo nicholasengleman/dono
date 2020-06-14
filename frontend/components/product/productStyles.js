@@ -1,32 +1,31 @@
-@import "./../../styles/breakpoints.scss";
+import styled from "styled-components";
+import device from "../../utils/breakspoints";
 
-$imageWidth: 150px;
-
-.c-product {
+export const StyledProduct = styled.div`
   display: flex;
+  flex-direction: column;
   font-family: "Varela Round", sans-serif;
-  margin: 0 50px 50px 0;
-  max-width: 50%;
+  margin-bottom: 3%;
   box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
   padding: 20px;
   background-color: #f7f7f6;
   border-radius: 3px;
   width: 45%;
   .image {
-    height: $imageWidth;
-    width: $imageWidth;
+    height: 150px;
+    width: 150px;
     background-color: lightgray;
     margin-right: 15px;
     border-radius: 3px;
   }
   .product-info {
-    width: calc(100% - #{$imageWidth});
+    width: calc(100% - 150px);
   }
   .name {
     font-size: 2rem;
     font-weight: 600;
     color: #8b8ca3;
-    @include breakpoint(desktop-sm) {
+    @media ${device.desktopSM} {
       font-size: 1.5rem;
     }
   }
@@ -39,7 +38,7 @@ $imageWidth: 150px;
     font-size: 2rem;
     color: #8b8ca3;
     font-weight: 800;
-    @include breakpoint(desktop-sm) {
+    @media ${device.desktopSM} {
       font-size: 1.5rem;
     }
   }
@@ -76,8 +75,18 @@ $imageWidth: 150px;
 
   .store {
     font-size: 2rem;
-    @include breakpoint(desktop-sm) {
+    @media ${device.desktopSM} {
       font-size: 1rem;
     }
   }
-}
+`;
+
+export const StyledRow = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+`;
+
+export const StyledRowCentered = styled(StyledRow)`
+  align-items: center;
+`;

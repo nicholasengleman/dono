@@ -1,5 +1,6 @@
 import Category from "./../components/category/category.jsx";
 import Product from "./../components/product/product.jsx";
+import Nav from "./../components/nav/nav";
 
 const data = [
   {
@@ -108,6 +109,7 @@ const data = [
 
 const Home = (props) => (
   <React.Fragment>
+    <Nav />
     {data.map(({ uuid, products, categoryName }, i) => (
       <Category key={i} name={categoryName} uuid={uuid}>
         {products.map(({ uuid, name, price, store }, j) => (

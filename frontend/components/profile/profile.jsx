@@ -1,15 +1,11 @@
-import Link from "next/link";
-
 import StyledProfile from "./profileStyles";
+
+import Nav from "./../nav/nav";
 
 const Profile = (props) => (
   <StyledProfile>
     <div className="c-header">
-      <div className="c-nav">
-        <Link href="/index">
-          <a>Home</a>
-        </Link>
-      </div>
+      <Nav />
       <div className="c-header-info">
         <div className="c-profileImg"></div>
         <div className="c-info">

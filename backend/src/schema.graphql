@@ -1,0 +1,25 @@
+type Query {
+  users(query: String): [User!]!
+  me: User!
+  products: [Product!]!
+}
+
+type Mutation {
+  createUser(name: String!, email: String!, age: Int): User!
+  createProduct(name: String!, price: Int!, userId: ID!): Product!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  age: Int
+  products(query: String): [Product!]!
+}
+
+type Product {
+  id: ID!
+  author: User!
+  name: String!
+  price: Int!
+}

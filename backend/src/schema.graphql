@@ -1,4 +1,4 @@
-type Mutations {
+type Mutation {
   hi: String
 }
 

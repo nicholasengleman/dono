@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { StyledProduct, StyledRowCentered, StyledRow } from "./productStyles";
+import React, { Component } from 'react';
+import { StyledProduct, StyledRowCentered, StyledRow } from './productStyles';
 
-import Add from "./../actions/add/add.jsx";
-import Donors from "./../donors/donors.jsx";
-import Donate from "./../actions/donate/donate.jsx";
+import Add from './../actions/add/add.jsx';
+import Donors from './../donors/donors.jsx';
+import Donate from './../actions/donate/donate.jsx';
 
 class Product extends Component {
   render() {

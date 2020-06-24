@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\engle\\Desktop\\Repos\\sperro\\frontend\\components\\Meta.js";
+var _jsxFileName = "C:\\Users\\engle\\Desktop\\repo\\dono\\frontend\\components\\Meta.js";
 
 
 
@@ -126,7 +126,7 @@ var Meta = function Meta() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    charset: "utf-8",
+    charSet: "utf-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -140,7 +140,7 @@ var Meta = function Meta() {
     __self: this
   }, "Sperro"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "https://kit.fontawesome.com/0ef604df8a.js",
-    crossorigin: "anonymous",
+    crossOrigin: "anonymous",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -183,7 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
 /* harmony import */ var _cssReset__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cssReset */ "./components/cssReset.js");
-var _jsxFileName = "C:\\Users\\engle\\Desktop\\Repos\\sperro\\frontend\\components\\Page.js";
+var _jsxFileName = "C:\\Users\\engle\\Desktop\\repo\\dono\\frontend\\components\\Page.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -347,7 +347,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
 
-var _jsxFileName = "C:\\Users\\engle\\Desktop\\Repos\\sperro\\frontend\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\engle\\Desktop\\repo\\dono\\frontend\\pages\\_app.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

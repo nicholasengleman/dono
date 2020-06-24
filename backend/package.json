@@ -1,20 +1,21 @@
 {
-   "name": "new-typeorm-project",
-   "version": "0.0.1",
-   "description": "Awesome project developed with TypeORM.",
-   "devDependencies": {
-      "@types/node": "^8.0.29",
-      "tsc-watch": "^4.2.9",
-      "typescript": "^3.9.5"
-   },
-   "dependencies": {
-      "body-parser": "^1.18.1",
-      "express": "^4.15.4",
-      "pg": "^7.3.0",
-      "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.25"
-   },
-   "scripts": {
-      "start": "tsc-watch --onSuccess \"node build/index.js \""
-   }
+  "name": "new-typeorm-project",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "pg": "^8.2.1",
+    "reflect-metadata": "^0.1.10",
+    "ts-node": "^8.10.2",
+    "typeorm": "0.2.25"
+  },
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node build/index.js \""
+  }
 }

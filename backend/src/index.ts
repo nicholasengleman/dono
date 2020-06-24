@@ -1,53 +1,23 @@
 import "reflect-metadata";
 import { createConnection } from "typeorm";
-import { User } from "./entity/User";
+import * as express from "express";
+import { ApolloServer } from "apollo-server-express";
 
-createConnection()
-  .then(async (connection) => {
-    console.log("connected");
-    // create express app
-    //const app = express();
-    //app.use(bodyParser.json());
+import typeDefs from "./typeDefs";
+import resolvers from "./resolvers";
 
-    // // register express routes from defined application routes
-    // Routes.forEach(route => {
-    //     (app as any)[route.method](route.route, (req: Request, res: Response, next: Function) => {
-    //         const result = (new (route.controller as any))[route.action](req, res, next);
-    //         if (result instanceof Promise) {
-    //             result.then(result => result !== null && result !== undefined ? res.send(result) : undefined);
+const startServer = async () => {
+  const server = new ApolloServer({ typeDefs, resolvers });
 
-    //         } else if (result !== null && result !== undefined) {
-    //             res.json(result);
-    //         }
-    //     });
-    // });
+  await createConnection();
 
-    // setup express app here
-    // ...
+  const app = express();
 
-    // start express server
-    //app.listen(3000);
+  server.applyMiddleware({ app });
 
-    // insert new users for test
-    // await connection.manager.save(
-    //   connection.manager.create(User, {
-    //     firstName: "Timber",
-    //     lastName: "Saw",
-    //     age: 27,
-    //   })
-    // );
-    // await connection.manager.save(
-    //   connection.manager.create(User, {
-    //     firstName: "Phantom",
-    //     lastName: "Assassin",
-    //     age: 24,
-    //   })
-    // );
+  app.listen({ port: 4000 }, () =>
+    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+  );
+};
 
-    console.log(
-      "Express server has started on port 3000. Open http://localhost:3000/users to see results"
-    );
-  })
-  .catch((error) => console.log(error));
-
-console.log("trying to run...");
+startServer();

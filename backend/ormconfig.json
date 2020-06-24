@@ -1,0 +1,18 @@
+{
+  "type": "postgres",
+  "host": "ruby.db.elephantsql.com",
+  "port": 5432,
+  "username": "uvjtpwkm",
+  "password": "T3rZ9TMp6dAJztWOYNdFC3Bt9cyABc8O",
+  "database": "uvjtpwkm",
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/entity/**/*.ts"],
+  "migrations": ["src/migration/**/*.ts"],
+  "subscribers": ["src/subscriber/**/*.ts"],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}

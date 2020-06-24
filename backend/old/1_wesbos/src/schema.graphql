@@ -2,14 +2,21 @@
 
 type Mutation {
   createProduct(
+    userID: ID
     name: String
     description: String
     image: String
     largeImage: String
     price: Int
   ): Product!
+  
+  createUser(
+    name: String
+    email: String
+  ): User!
 }
 
 type Query {
   products: [Product]!
+  users: [User]!
 }

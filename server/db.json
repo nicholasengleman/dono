@@ -1,0 +1,80 @@
+{
+  "users" : [
+    {
+      "id": 1,
+      "Name": "Amanda"
+    },
+    {
+      "id": 2,
+      "Name": "Sarah"
+    },
+    {
+      "id" : 3,
+      "name": "Jessica"
+    }
+  ],
+  "categories" : [
+    {
+      "id": 11,
+      "categoryName": "Shoes",
+      "creatorID": 1
+    },
+    {
+      "id": 12,
+      "categoryName": "Goals",
+      "creatorID": 2
+    },
+    {
+      "id" : 13,
+      "categoryName": "Charities",
+      "creatorID": 3
+    },
+    {
+      "id" : 14,
+      "categoryName": "Games",
+      "creatorID": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 112,
+      "categoryId": 11,
+      "userId": 1,
+      "name": "Shoes",
+      "price": 5,
+      "store": "amazon.com",
+      "description": "description"
+    },
+    {
+      "id": 113,
+      "categoryId": 11,
+      "userId": 1,
+      "name": "Name",
+      "price": 5,
+      "store": "amazon.com",
+      "description": "description"
+    },
+    {
+      "id": 114,
+      "categoryId": 12,
+      "userId": 2,
+      "name": "Name",
+      "price": 5,
+      "store": "amazon.com",
+      "description": "description"
+    },
+    {
+      "id": 115,
+      "categoryId": 13,
+      "userId": 3,
+      "name": "Name",
+      "price": 5,
+      "store": "amazon.com",
+      "description": "description"
+    }
+  ]
+}
+    
+
+
+

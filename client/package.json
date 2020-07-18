@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "webpack-watch": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.0.1",
     "axios": "^0.19.2",
+    "graphql": "^15.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

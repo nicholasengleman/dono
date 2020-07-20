@@ -1,5 +1,5 @@
 {
-  "users" : [
+  "users": [
     {
       "id": 1,
       "Name": "Amanda"
@@ -9,11 +9,11 @@
       "Name": "Sarah"
     },
     {
-      "id" : 3,
+      "id": 3,
       "name": "Jessica"
     }
   ],
-  "categories" : [
+  "categories": [
     {
       "id": 11,
       "categoryName": "Shoes",
@@ -25,12 +25,12 @@
       "creatorID": 2
     },
     {
-      "id" : 13,
+      "id": 13,
       "categoryName": "Charities",
       "creatorID": 3
     },
     {
-      "id" : 14,
+      "id": 14,
       "categoryName": "Games",
       "creatorID": 3
     }
@@ -40,7 +40,7 @@
       "id": 112,
       "categoryId": 11,
       "userId": 1,
-      "name": "Shoes",
+      "name": "Red Shoes",
       "price": 5,
       "store": "amazon.com",
       "description": "description"
@@ -74,7 +74,3 @@
     }
   ]
 }
-    
-
-
-

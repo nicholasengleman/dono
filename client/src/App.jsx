@@ -1,41 +1,22 @@
-import React, { Component } from "react";
-import { useQuery, gql } from '@apollo/client';
+import React from "react";
+import { Switch, Route, Link } from "react-router";
+
+import Profile from "./components/profile";
+import Home from "./components/home";
+
 import "./styles/index.scss";
 
-import Profile from "./components/profile/profile.jsx";
-import Category from "./components/category/category.jsx";
-import Product from "./components/product/product.jsx"
-
-
-const PRODUCTS = gql`
-  query GetProducts {
-    products {
-      name
-    }
-  }
-`;
-
-class App extends Component {
-  render() {
-    return (
-      <React.Fragment>
+const App = () => {
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/profile">
         <Profile />
-        {data.map(({ id, products, categoryName }, i) => (
-          <Category key={i} name={categoryName} id={id}>
-            {products.map(({ id, name, price, store }, j) => (
-              <Product
-                key={j}
-                uuid={id}
-                name={name}
-                price={price}
-                store={store}
-              />
-            ))}
-          </Category>
-        ))}
-      </React.Fragment>
-    );
-  }
-}
+      </Route>
+    </Switch>
+  );
+};
 
 export default App;

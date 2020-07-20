@@ -1,36 +1,34 @@
-import React, { Component } from "react";
-import Toggle from "./../toggle/toggle.jsx";
-import "./profile.scss";
+import React from "react";
+import { useQuery } from "@apollo/client";
+import Profile from "./components/profileHeader/profileHeader.jsx";
+import Category from "./components/category/category.jsx";
+import Product from "./components/product/product.jsx";
 
-class Profile extends Component {
-  render() {
-    return (
-      <div className="c-profile">
-        <div className="c-header">
-          <div className="c-nav"></div>
-          <div className="c-header-info">
-            <div className="c-profileImg"></div>
-            <div className="c-info">
-              <div className="name">Bernadette E.</div>
-              <div className="title">Title</div>
-              <div className="c-stats">
-                <div className="c-followers">
-                  <div className="followerImg"></div>
-                  <div className="followerData">
-                    <div>
-                      <span className="followerNumber">280</span>
-                      <span>K</span>
-                    </div>
-                    <p>Followers</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+import query from "./queries/fetchProducts";
+
+const Profile = () => {
+  const { loading, error, data } = useQuery(query);
+
+  if (loading) {
+    return <p>Loading...</p>;
   }
-}
+
+  if (error) {
+    return <p>Error</p>;
+  }
+
+  return (
+    <>
+      <Profile />
+      {data.categories.map(({ id, products, categoryName }, i) => (
+        <Category key={i} name={categoryName} id={id}>
+          {products.map(({ id, name, price, store }, j) => (
+            <Product key={j} uuid={id} name={name} price={price} store={store} />
+          ))}
+        </Category>
+      ))}
+    </>
+  );
+};
 
 export default Profile;

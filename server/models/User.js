@@ -10,7 +10,6 @@ const typeDefs = gql`
     id: ID
     name: String
     categories: [Category]
-    products: [Product]
   }
 `;
 
@@ -39,16 +38,6 @@ const resolvers = {
         const categories = await axios.get("http://localhost:3000/categories");
         return categories.data.filter((category) => {
           return category.creatorID === parent.id;
-        });
-      } catch (error) {
-        throw error;
-      }
-    },
-    products: async (parent, args, ctx, info) => {
-      try {
-        const products = await axios.get("http://localhost:3000/products");
-        return products.data.filter((product) => {
-          return product.userId === parent.id;
         });
       } catch (error) {
         throw error;

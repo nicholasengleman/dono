@@ -49,7 +49,7 @@
       "id": 113,
       "categoryId": 11,
       "userId": 1,
-      "name": "Name",
+      "name": "Bread",
       "price": 5,
       "store": "amazon.com",
       "description": "description"
@@ -58,7 +58,7 @@
       "id": 114,
       "categoryId": 12,
       "userId": 2,
-      "name": "Name",
+      "name": "House",
       "price": 5,
       "store": "amazon.com",
       "description": "description"
@@ -67,7 +67,16 @@
       "id": 115,
       "categoryId": 13,
       "userId": 3,
-      "name": "Name",
+      "name": "Phone",
+      "price": 5,
+      "store": "amazon.com",
+      "description": "description"
+    },
+    {
+      "id": 116,
+      "categoryId": 14,
+      "userId": 3,
+      "name": "Cat",
       "price": 5,
       "store": "amazon.com",
       "description": "description"

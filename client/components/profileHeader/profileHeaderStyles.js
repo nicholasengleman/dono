@@ -93,6 +93,12 @@ export default styled.div`
           }
         }
       }
+      .button-menu {
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
     }
   }
 `;

@@ -37,7 +37,7 @@
   ],
   "products": [
     {
-      "id": 112,
+      "id": "112",
       "categoryId": 11,
       "userId": 1,
       "name": "Red Shoes",
@@ -46,7 +46,7 @@
       "description": "description"
     },
     {
-      "id": 113,
+      "id": "113",
       "categoryId": 11,
       "userId": 1,
       "name": "Bread",
@@ -55,7 +55,7 @@
       "description": "description"
     },
     {
-      "id": 114,
+      "id": "114",
       "categoryId": 12,
       "userId": 2,
       "name": "House",
@@ -64,7 +64,7 @@
       "description": "description"
     },
     {
-      "id": 115,
+      "id": "115",
       "categoryId": 13,
       "userId": 3,
       "name": "Phone",
@@ -73,13 +73,49 @@
       "description": "description"
     },
     {
-      "id": 116,
-      "categoryId": 14,
-      "userId": 3,
-      "name": "Cat",
-      "price": 5,
-      "store": "amazon.com",
-      "description": "description"
+      "id": "764a2283-3df1-48e0-8d9e-e5b53c12736a",
+      "categoryId": 11,
+      "userId": 1,
+      "name": "qweqw",
+      "price": 3424,
+      "description": "sdf",
+      "store": "sdfs"
+    },
+    {
+      "id": "7fa12afd-0614-427b-9ffd-d121e241c7a4",
+      "categoryId": 11,
+      "userId": 1,
+      "name": "wqeqwe",
+      "price": 324234,
+      "description": "sdf",
+      "store": "fsdf"
+    },
+    {
+      "id": "d962b0db-60b5-4090-9aa1-e66512c95af8",
+      "categoryId": 11,
+      "userId": 1,
+      "name": "sdfsdf",
+      "price": 423423,
+      "description": "sdfsdf",
+      "store": "dfss"
+    },
+    {
+      "id": "101be381-babc-4c2e-9df5-e7af32b6959a",
+      "categoryId": 11,
+      "userId": 1,
+      "name": "sdfdsf",
+      "price": 23423,
+      "description": "sdf",
+      "store": "sdfs"
+    },
+    {
+      "id": "f45ad6ed-6e22-4cd6-ae70-09f7439a17e6",
+      "categoryId": 11,
+      "userId": 1,
+      "name": "sdfsd",
+      "price": 343,
+      "description": "fghfghfgh",
+      "store": "dsf"
     }
   ]
 }

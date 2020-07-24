@@ -3,7 +3,7 @@ import Head from "next/head";
 const Meta = () => (
   <Head>
     <meta name="viewport" contents="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
+    <meta charSet="utf-8" />
     <title>Sperro</title>
     <link rel="stylesheet" type="text/css" href="/nprogress.css" />
     <link

@@ -67,7 +67,7 @@ const addProduct = ({ visibility, setVisibility }) => {
               <label htmlFor="store">Store Link</label>
               <input name="store" type="text" ref={register({ required: true })} />
               <label htmlFor="tag">Tag</label>
-              <input name="tag" type="text" ref={register({ required: true })} />
+              <input name="tag" type="text" placeholder="add a new tag" ref={register({ required: true })} />
               <div className="tag-container">
                 <span className="tag">tag</span>
                 <span className="tag">tag</span>

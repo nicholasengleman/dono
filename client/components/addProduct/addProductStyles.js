@@ -71,7 +71,7 @@ export default styled.div`
     input,
     textarea {
       border-radius: 5px;
-      border: 2px solid #d3d3d3;
+      border: 1px solid #d3d3d3;
       background-image: none !important;
       background: none !important;
       padding: 5px 10px;
@@ -108,7 +108,7 @@ export default styled.div`
     display: flex;
     flex-wrap: wrap;
     .tag {
-      border: 2px solid #d3d3d3;
+      border: 1px solid #d3d3d3;
       border-radius: 20px;
       padding: 2px 15px;
       margin: 0 5px 10px 0;

@@ -9,7 +9,7 @@ export const StyledProduct = styled.div`
   box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
   padding: 20px;
   background-color: #f7f7f6;
-  border-radius: 3px;
+  border-radius: 10px;
   width: 45%;
   .image {
     height: 150px;
@@ -24,7 +24,7 @@ export const StyledProduct = styled.div`
   .name {
     font-size: 2rem;
     font-weight: 600;
-    color: #8b8ca3;
+    color: #272b2e;
     @media ${device.desktopSM} {
       font-size: 1.5rem;
     }
@@ -36,7 +36,7 @@ export const StyledProduct = styled.div`
   }
   .price {
     font-size: 2rem;
-    color: #8b8ca3;
+    color: #272b2e;
     font-weight: 800;
     @media ${device.desktopSM} {
       font-size: 1.5rem;
@@ -47,7 +47,6 @@ export const StyledProduct = styled.div`
     height: 20px;
     border-radius: 6px;
     background-color: #dee0e0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
     .progress {
       height: 100%;
       width: 50%;
@@ -58,11 +57,7 @@ export const StyledProduct = styled.div`
         #71f7f2,
         #36b8e9
       ); /* Standard syntax */
-      z-index: 333;
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
-        0 1px rgba(255, 255, 255, 0.08);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
-        0 1px rgba(255, 255, 255, 0.08);
+      z-index: 3;
       .raised {
         position: absolute;
         right: 15px;

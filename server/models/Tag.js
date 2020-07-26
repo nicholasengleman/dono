@@ -3,43 +3,43 @@ const axios = require("axios");
 
 const typeDefs = gql`
   extend type Query {
-    categories: [Category]
+    tags: [Tag]
+    tag(id: String!): Tag
   }
-  type Category {
+
+  type Tag {
     id: String
-    categoryName: String
-    creator: User
+    name: String
     products: [Product]
   }
 `;
 
 const resolvers = {
   Query: {
-    categories: async (parent, args, ctx, info) => {
+    tags: async (parent, args, ctx, info) => {
       try {
-        const categories = await axios.get("http://localhost:3000/categories");
-        return categories.data;
+        const tags = await axios.get("http://localhost:3000/tags");
+        return tags.data;
+      } catch (error) {
+        throw error;
+      }
+    },
+    tag: async (parent, args, ctx, info) => {
+      try {
+        const tag = await axios.get(`http://localhost:3000/tags/${args.id}`);
+        return tag.data;
       } catch (error) {
         throw error;
       }
     },
   },
-  Category: {
-    creator: async (parent, args, ctx, info) => {
-      try {
-        const categories = await axios.get("http://localhost:3000/categories");
-        return categories.data.filter((category) => {
-          return category.creatorID === parent.id;
-        });
-      } catch (error) {
-        throw error;
-      }
-    },
+
+  Tag: {
     products: async (parent, args, ctx, info) => {
       try {
         const products = await axios.get("http://localhost:3000/products");
         return products.data.filter((product) => {
-          return product.categoryId === parent.id;
+          return product.tagId === parent.id;
         });
       } catch (error) {
         throw error;

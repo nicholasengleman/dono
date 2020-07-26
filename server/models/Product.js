@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
 
   extend type Mutation {
-    addProduct(name: String, price: Int, description: String, store: String, categoryId: Int, userId: Int): String
+    addProduct(name: String, price: Int, description: String, store: String, categoryId: String, tagId: String, userId: String): String
   }
 
   type Product {
@@ -17,8 +17,9 @@ const typeDefs = gql`
     price: Int
     store: String
     description: String
-    categoryId: Int
-    creator: User
+    categoryId: Category
+    creatorId: User
+    tagId: Tag
   }
 `;
 
@@ -34,16 +35,17 @@ const resolvers = {
     },
   },
   Mutation: {
-    addProduct: async (parent, { categoryId, userId, name, price, description, store }, ctx, info) => {
+    addProduct: async (parent, { name, price, description, store, categoryId, userId, tagId }, ctx, info) => {
       try {
         const result = await axios.post("http://localhost:3000/products", {
           id: uuidv4(),
-          categoryId,
-          userId,
           name,
           price,
           description,
           store,
+          categoryId,
+          userId,
+          tagId,
         });
       } catch (error) {
         throw error;

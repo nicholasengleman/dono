@@ -4,10 +4,10 @@ const axios = require("axios");
 const typeDefs = gql`
   extend type Query {
     users: [User]
-    user(id: Int!): User
+    user(id: String!): User
   }
   type User {
-    id: ID
+    id: String
     name: String
     categories: [Category]
   }

@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import StyledAddProduct from "./addProductStyles";
 import { useForm } from "react-hook-form";
-import { useMutation } from "@apollo/react-hooks";
+import { useMutation, useQuery } from "@apollo/react-hooks";
 import { useRouter } from "next/router";
 import withApollo from "../../lib/withApollo";
 import ADD_PRODUCT from "../../queries/addProduct";
-import FETCH_PRODUCTS from "../../queries/fetchProducts";
+import GET_PRODUCTS from "../../queries/getProducts";
+import GET_TAGS from "../../queries/getTags";
 
 const addProduct = ({ visibility, setVisibility }) => {
   const router = useRouter();
   const { id } = router.query;
   const { register, handleSubmit, reset } = useForm();
   const [addProduct, { data }] = useMutation(ADD_PRODUCT);
+  const { loading: loadingTags, data: dataTags } = useQuery(GET_TAGS);
 
   const [section, setSection] = useState(1);
 
@@ -24,15 +26,16 @@ const addProduct = ({ visibility, setVisibility }) => {
   };
 
   const onSubmit = (data) => {
-    console.log(data);
     const variables = {
       ...data,
       price: parseInt(data.price),
-      categoryId: 11,
-      userId: parseInt(id),
+      categoryId: "11",
+      userId: id,
     };
 
-    addProduct({ variables, refetchQueries: [{ query: FETCH_PRODUCTS, variables: { id: parseInt(id) } }] });
+    console.log(variables);
+
+    addProduct({ variables, refetchQueries: [{ query: GET_PRODUCTS, variables: { id } }] });
     onClose();
   };
 
@@ -67,20 +70,15 @@ const addProduct = ({ visibility, setVisibility }) => {
               <label htmlFor="store">Store Link</label>
               <input name="store" type="text" ref={register({ required: true })} />
               <label htmlFor="tag">Tag</label>
-              <input name="tag" type="text" placeholder="add a new tag" ref={register({ required: true })} />
-              <div className="tag-container">
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-                <span className="tag">tag</span>
-              </div>
+              <select name="tagId" ref={register({ required: true })}>
+                {dataTags &&
+                  dataTags.tags.map((tag) => (
+                    <option key={tag.name} value={tag.id} className="tag">
+                      {tag.name}
+                    </option>
+                  ))}
+              </select>
+              <div className="tag-container"></div>
             </div>
             <div className="image-upload">Image Upload</div>
           </div>

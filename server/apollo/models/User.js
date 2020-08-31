@@ -1,13 +1,21 @@
 const { gql } = require("apollo-server");
 const axios = require("axios");
+const user = require("../../sequelize/controllers/user");
 
 const typeDefs = gql`
+  input UserInput {
+    name: String
+    password: String
+  }
   extend type Query {
     users: [User]
-    user(id: String!): User
+    user(id: Int!): User
+  }
+  extend type Mutation {
+    createUser(input: UserInput): User
   }
   type User {
-    id: String
+    id: Int
     name: String
     categories: [Category]
   }
@@ -17,16 +25,26 @@ const resolvers = {
   Query: {
     users: async (parent, args, ctx, info) => {
       try {
-        const users = await axios.get("http://localhost:3000/users");
-        return users.data;
+        const users = await user.readAll();
+        return users;
       } catch (error) {
         throw error;
       }
     },
     user: async (parent, args, ctx, info) => {
       try {
-        const user = await axios.get(`http://localhost:3000/users/${args.id}`);
-        return user.data;
+        const user = await user.read(args);
+        return user;
+      } catch (error) {
+        throw error;
+      }
+    },
+  },
+  Mutation: {
+    createUser: async (parent, args, ctx, info) => {
+      try {
+        const result = await user.create(args.input);
+        return result;
       } catch (error) {
         throw error;
       }

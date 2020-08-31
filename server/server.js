@@ -1,6 +1,8 @@
-const { ApolloServer } = require("apollo-server");
-const { schema } = require("./schema");
+const db = require("./sequelize/db");
+const apollo = require("./apollo/server");
 
-const server = new ApolloServer({ schema });
+apollo();
 
-server.listen().then(({ url }) => console.log(`Server ready at ${url}`))
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Database and tables created!");
+});

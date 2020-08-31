@@ -44,7 +44,8 @@
       "description": "description",
       "categoryId": "11",
       "userId": "1",
-      "tagId": "shoes"
+      "tagId": "1112",
+      "likes": "2"
     },
     {
       "id": "113",
@@ -54,7 +55,8 @@
       "description": "description",
       "categoryId": "11",
       "userId": "1",
-      "tagId": "1112"
+      "tagId": "1112",
+      "likes": "2"
     },
     {
       "id": "114",
@@ -64,7 +66,8 @@
       "description": "description",
       "categoryId": "12",
       "userId": "2",
-      "tagId": "1113"
+      "tagId": "1113",
+      "likes": "2"
     },
     {
       "id": "115",
@@ -74,7 +77,8 @@
       "description": "description",
       "categoryId": "13",
       "userId": "3",
-      "tagId": "1114"
+      "tagId": "1114",
+      "likes": "2"
     },
     {
       "id": "764a2283-3df1-48e0-8d9e-e5b53c12736a",
@@ -83,7 +87,8 @@
       "description": "sdf",
       "store": "sdfs",
       "categoryId": "11",
-      "userId": "1"
+      "userId": "1",
+      "likes": "2"
     },
     {
       "id": "7fa12afd-0614-427b-9ffd-d121e241c7a4",
@@ -92,7 +97,8 @@
       "description": "sdf",
       "store": "fsdf",
       "categoryId": "11",
-      "userId": "1"
+      "userId": "1",
+      "likes": "2"
     },
     {
       "id": "d962b0db-60b5-4090-9aa1-e66512c95af8",
@@ -101,7 +107,8 @@
       "description": "sdfsdf",
       "store": "dfss",
       "categoryId": "11",
-      "userId": "1"
+      "userId": "1",
+      "likes": "2"
     },
     {
       "id": "101be381-babc-4c2e-9df5-e7af32b6959a",
@@ -110,7 +117,8 @@
       "description": "sdf",
       "store": "sdfs",
       "categoryId": "11",
-      "userId": "1"
+      "userId": "1",
+      "likes": "2"
     },
     {
       "id": "f45ad6ed-6e22-4cd6-ae70-09f7439a17e6",
@@ -119,7 +127,8 @@
       "description": "fghfghfgh",
       "store": "dsf",
       "categoryId": "11",
-      "userId": "1"
+      "userId": "1",
+      "likes": "2"
     },
     {
       "id": "e2804f95-1932-4e05-a25f-c3e8fba1133a",
@@ -129,21 +138,33 @@
       "store": "sdf",
       "categoryId": "11",
       "userId": "1",
-      "tagId": "1113"
+      "tagId": "1113",
+      "likes": "2"
+    },
+    {
+      "id": "3702a6b6-cbd7-4f57-a0a5-ba22ee1e6dfc",
+      "name": "cow",
+      "price": 231,
+      "description": "cow",
+      "store": "cow",
+      "categoryId": "11",
+      "userId": "1",
+      "tagId": "1112",
+      "likes": "2"
     }
   ],
   "tags": [
     {
       "id": "1112",
-      "name": "Shoes"
+      "name": "shoes"
     },
     {
       "id": "1113",
-      "name": "Clothes"
+      "name": "clothes"
     },
     {
       "id": "1114",
-      "name": "Food"
+      "name": "food"
     }
   ]
 }

@@ -5,7 +5,7 @@ import { useMutation, useQuery } from "@apollo/react-hooks";
 import { useRouter } from "next/router";
 import withApollo from "../../lib/withApollo";
 import ADD_PRODUCT from "../../queries/addProduct";
-import GET_PRODUCTS from "../../queries/getProducts";
+import GET_USER_PRODUCTS from "../../queries/getUserProducts";
 import GET_TAGS from "../../queries/getTags";
 
 const addProduct = ({ visibility, setVisibility }) => {
@@ -35,7 +35,7 @@ const addProduct = ({ visibility, setVisibility }) => {
 
     console.log(variables);
 
-    addProduct({ variables, refetchQueries: [{ query: GET_PRODUCTS, variables: { id } }] });
+    addProduct({ variables, refetchQueries: [{ query: GET_USER_PRODUCTS, variables: { id } }] });
     onClose();
   };
 

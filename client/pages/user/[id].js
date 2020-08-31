@@ -1,17 +1,17 @@
 import { useQuery } from "@apollo/react-hooks";
 import { useRouter } from "next/router";
 import withApollo from "../../lib/withApollo";
-import GET_PRODUCTS from "../../queries/getProducts";
+import GET_USER_PRODUCTS from "../../queries/getUserProducts";
 
-import ProfileHeader from "./../../components/profileHeader/profileHeader.jsx";
-import Category from "./../../components/category/category.jsx";
-import Product from "./../../components/product/product.jsx";
+import ProfileHeader from "../../components/profileHeader/profileHeader.jsx";
+import Category from "../../components/category/category.jsx";
+import Product from "../../components/product/product.jsx";
 
 const Profile = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const { loading, data } = useQuery(GET_PRODUCTS, {
+  const { loading, data } = useQuery(GET_USER_PRODUCTS, {
     variables: { id },
   });
 

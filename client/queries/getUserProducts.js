@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export default gql`
-  query getProducts($id: String!) {
+  query getUserProducts($id: String!) {
     user(id: $id) {
       categories {
         id

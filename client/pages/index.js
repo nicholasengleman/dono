@@ -1,8 +1,7 @@
-import Login from '../components/Auth/Login';
-import Logout from '../components/Auth/Logout';
 import { withApollo } from '../lib/withApollo';
 import { useFetchUser } from '../lib/user';
 import ProductList from '../components/productList/productList';
+import Header from '../components/header/header';
 
 const Home = () => {
     const { user, loading } = useFetchUser();
@@ -10,14 +9,12 @@ const Home = () => {
         return <div>Loading...</div>;
     }
     if (!loading && !user) {
-        return <Login />;
+        return <Header loggedIn={false} />;
     }
 
     return (
         <>
-            <div>Home</div>
-            <Logout />
-
+            <Header loggedIn={true} />
             <ProductList />
         </>
     );

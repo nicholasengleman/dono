@@ -15,7 +15,7 @@ const Product = () => {
         return <h1>loading...</h1>;
     }
 
-    return <div></div>;
+    return <div>test</div>;
 };
 
 export default withApollo()(Product);

@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/react-hooks";
 import { withApollo } from "./../../lib/withApollo";
 import GET_PRODUCT from "./../../queries/getProduct";
 import styles from "./styles.module.scss";
+import Header from '../../components/header/header';
 
 const Product = () => {
   const router = useRouter();
@@ -19,6 +20,8 @@ const Product = () => {
   const { products_by_pk: info } = data;
 
   return (
+    <>
+    <Header loggedIn={true} />
     <div className={styles.productContainer}>
       <div className={styles.row}>
         <div className={styles.image}></div>
@@ -34,6 +37,7 @@ const Product = () => {
         <div className={styles.save}>Saves: 10</div>
       </div>
     </div>
+    </>
   );
 };
 
